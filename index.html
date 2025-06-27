@@ -15,8 +15,8 @@
         </div>
         <div class="sign-up-section">
             <div class="header-section">
-                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
-                <p>You know you want to.</p>
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+                <p>You <em>know</em> you want to.</p>
             </div>
             <form class="form-section" action="#">
                 <legend>Let's do this!</legend>
@@ -25,39 +25,39 @@
                     <div class="form-row">
                         <div class="form-item first-name">
                             <label for="first-name">First Name</label>
-                            <input id="first-name" type="text">
+                            <input id="first-name" name="first-name" type="text">
                         </div>
                         <div class="form-item last-name">
                             <label for="last-name">Last Name</label>
-                            <input id="last-name" type="text">
+                            <input id="last-name" name="last-name" type="text">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-item email">
-                            <label for="email">Email</label>
-                            <input id="first-name" type="email">
+                            <label class="reqd" for="email">Email</label>
+                            <input id="email" name="email" type="email" required>
                         </div>
                         <div class="form-item phone">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="number">
+                            <label class="reqd" for="phone">Phone Number</label>
+                            <input id="phone" name="phone" type="number" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-item password">
-                            <label for="password">Password</label>
-                            <input id="password" type="password">
+                            <label class="reqd" for="password">Password</label>
+                            <input id="password" name="password" type="password" minlength="8" maxlength="20" required>
                         </div>
                         <div class="form-item conf-password">
-                            <label for="conf-password">Confirm Password</label>
-                            <input id="conf-password" type="password">
+                            <label class="reqd" for="conf-password">Confirm Password</label>
+                            <input id="conf-password" name="conf-password" type="password" minlength="8" maxlength="20" required>
                         </div>
                     </div>
                 </div>
                 <div class="submit-button">
                     <button type="submit">Create Account</button>
-                    <p>Already have an account? <a href="#">Log in</a></p>
+                    <p class="log-in">Already have an account? <a href="#">Log in</a></p>
                 </div>
             </form>
         </div>

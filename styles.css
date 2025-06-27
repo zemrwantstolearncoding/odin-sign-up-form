@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
 :root {
@@ -23,6 +25,10 @@ img {
   max-inline-size: 100%;
 }
 
+p {
+  max-inline-size: 66ch;
+}
+
 
 /* this removes the ugly arrows on input type number */
 /* Chrome, Safari, Edge, Opera */
@@ -35,7 +41,9 @@ input::-webkit-inner-spin-button {
 
 
 main {
-    display: flex;
+  display: flex;
+  background-color: #080705;
+  font-family: "Roboto Mono", monospace;
 }
 
 div.hero-section {
@@ -55,7 +63,7 @@ p.title {
   transform: translate(-50%, -50%);
   z-index: 1;
   color: aliceblue;
-  font-size: 12vh;
+  font-size: 15vh;
   font-weight: 600;
 }
 
@@ -66,7 +74,11 @@ p.pic-credit {
   transform: translate(-50%, -50%);
   z-index: 1;
   color: aliceblue;
-  font-size: 1.9vh;
+  font-size: 1.75vh;
+}
+
+p.pic-credit a {
+  text-decoration: underline;
 }
 
 a {
@@ -81,18 +93,36 @@ div.sign-up-section {
     justify-content: center;
     padding: 2% 5%;
     gap: 72px;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.25rem);
+}
+
+div.header-section {
+  color: #D6D9DC;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 form.form-section {
   display: flex;
   flex-direction: column;
   gap: 5vh;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 5px;
+  padding: 50px;
+  color: #36454f;
+}
+
+form > legend {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 div.form-section {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+
 }
 
 div.form-row {
@@ -104,6 +134,37 @@ div.form-row {
 div.form-item {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.reqd::before {
+  content: "*";
+  color: #b92326;
+}
+
+.form-row input {
+  background-color: #FFFFFF;
+  border: 2px solid #D6D9DC;
+  border-radius: 5px;
+  width: clamp(100%, 300px, 20vw);
+  padding: 2.5% 6%;
+}
+
+.form-row input:user-invalid {
+  border: 2px solid #b92326;
+  background-color: rgba(185, 35, 38, 0.25);
+}
+
+.form-row input:user-valid {
+  border: 2px solid #8BC34A;
+  background-color: rgba(139, 195, 74, 0.25);
+}
+
+.form-row input:focus {
+  outline: none;
+  border: 2px solid #D2E5F6;
+  box-shadow: 4px 4px 4px lightgrey;
 }
 
 div.submit-button {
@@ -111,4 +172,26 @@ div.submit-button {
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  font-size: 1.25rem;
+}
+
+.submit-button button {
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #403830;
+  width: clamp(10vw, 100%, 250px);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px lightgrey;
+
+  padding-top: min(2%, 15px);
+  padding-bottom: min(2%, 15px);
+  padding-left: min(2%, 40px);
+  padding-right: min(2%, 40px);
+  cursor: pointer;
+}
+
+p.log-in a {
+  font-weight: 500;
+  color: #5a523b;
 }
